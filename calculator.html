@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Page title</title>
+</head>
+<body>
+    <style>
+    body{
+        font-family:monospace;
+      
+       height:100vh auto;
+       background: white;
+    }
+        .btn{
+        background: green;
+            height:50px;
+            width:70px;
+            font-family:serif;
+            border:none;
+            box-shadow:0px 0px 5px 0px green;
+font-size:20px;
+margin:5px auto;
+text-align: center;
+justify-content: center;
+border-radius:10px;
+color: white;
+font-weight: bold;
+transition:1s;
+        }
+   .btn:hover{
+   box-shadow:0px 0px 5px 0px green;
+font-weight: bold;
+       background:white;
+       transform:scale(1.1);
+       color: green;
+      
+   }   
+      .btn1{
+            height:50px;
+            background: green;
+            width:70px;
+            font-family:serif;
+            border:none;
+            color: white;
+font-size:20px;
+font-weight: bold;
+margin:5px auto;
+text-align: center;
+justify-content: center;
+border-radius:10px;
+box-shadow:0px 0px 5px 0px green;
+transition:1s;
+        }
+        .btn1:hover{
+            background:white;
+            transform:scale(1.1);
+            color: green;
+        }
+        .btn2{
+            height:50px;
+            width:300px;
+            font-family:serif;
+            background: white;
+            border:none;
+            color: green;
+font-size:20px;
+margin:5px auto;
+text-align: center;
+justify-content: center;
+border-radius:10px;
+font-weight: bold;
+box-shadow:0px 0px 5px 0px green;
+transition:1s;
+        }
+        .btn2:hover{
+            background:white;
+            transform:scale(1.1);
+            color: green;
+        }
+     .result{
+     background: white;
+     font-family:serif;
+    font-size:20px;
+    color: Black;
+         padding:40px 20px;
+         margin-bottom:20px;
+         font-size:20px auto;
+         border-radius:10px;
+         border:none;
+         border:2px solid green;
+         box-shadow:0px 0px 5px 0px green;
+     }
+     
+    </style>
+<center><form name="calculator">
+     <input class="result" type="text" name="result" placeholder="Developed by Awatech"><br>
+     <input class="btn" type="button" onclick="go()" value="c">
+     
+     <input class="btn" type="button" onclick="power2()" value="^2"> 
+     <input class="btn" type="button" onclick="sqrt()" value="√"> 
+     <input class="btn" type="button" onclick="power3()" value="^3"> <br>
+     <input class="btn" type="button" onclick="exp(value)" value="expo"> 
+     <input class="btn" type="button" onclick="sin()" value="sin">  
+     <input class="btn" type="button" onclick="cos()" value="cos"> 
+     <input class="btn" type="button" onclick="tan()" value="tan"> <br>
+     <input class="btn1" type="button" onclick="log()" value="log">
+     <input class="btn1" type="button" onclick="del()" value="DEL">
+      <input class="btn1" type="button" onclick="Number(value)" value="("> 
+     <input class="btn1" type="button" onclick="Number(value)" value=")">   <br>
+    
+  <input class="btn1" type="button" onclick="Number(value)" value="1"> 
+    <input class="btn1" type="button" onclick="Number(value)" value="2"> 
+      
+     
+      <input class="btn1" type="button" onclick="Number(value)" value="3">  
+      <input class="btn1" type="button" onclick="Number(value)" value="4"><br>
+      <input class="btn1" type="button" onclick="Number(value)" value="5">
+      <input class="btn1" type="button" onclick="Number(value)" value="6">
+      <input class="btn1" type="button" onclick="Number(value)" value="7">
+      <input class="btn1" type="button" onclick="Number(value)" value="8"><br>
+      <input class="btn1" type="button" onclick="Number(value)" value="9">
+      <input class="btn1" type="button" onclick="Number(value)" value="0">
+      <input class="btn1" type="button" onclick="Number(value)" value="00">
+     <input class="btn1" type="button" onclick="Number(value)" value=".">  <br>
+     <input class="btn1" type="button" onclick="Number(value)" value="-">  
+     <input class="btn1" type="button" onclick="Number(value)" value="+">
+     <input class="btn1" type="button" onclick="Number(value)" value="/">
+     <input class="btn1" type="button" onclick="Number(value)" value="*"><br>
+     <input class="btn2" type="button" onclick="equal()" value="=">  
+ </form></center>
+  
+  
+ <script>
+  
+ function Number(value){
+         document.calculator.result.value+=value;
+     }
+     function equal(){
+         document.calculator.result.value =eval(document.calculator.result.value);
+     }
+     function power2(){
+         document.calculator.result.value =Math.pow(document.calculator.result.value,2);
+     }
+     function power3(){
+         document.calculator.result.value =Math.pow(document.calculator.result.value,3);
+     }
+     function go(){
+         document.calculator.result.value='';
+     }
+     function log(){
+         document.calculator.result.value =Math.log(document.calculator.result.value);
+     }
+     function sqrt(){
+         document.calculator.result.value =Math.sqrt(document.calculator.result.value);
+     }
+     function sin(){
+         document.calculator.result.value =Math.sin(document.calculator.result.value);
+     }
+    function cos(){
+         document.calculator.result.value =Math.cos(document.calculator.result.value);
+     }
+     function tan(){
+         document.calculator.result.value =Math.tan(document.calculator.result.value);
+     }
+     function exp(){
+         document.calculator.result.value =Math.exp(document.calculator.result.value);
+     }
+     function del(){
+       var x=document.calculator.result.value; document.calculator.result.value=x.substr(0,x.length-1);
+     }
+ </script> 
+   
+</body>
+</html>

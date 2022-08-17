@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Details</title>
+</head>
+<body>
+    <div id="myname"></div>
+    <div id="myphone"></div>
+<form action="localStorage.html"><input type="text"   id="fname"><br>
+ <input type="text"   id="fphone"><br>
+ <input type="button" onclick="edi()" value="Edit"></form>
+ <script>
+     function edi(){
+     var fname=document.getElementById("fname").value;
+     var fphone=document.getElementById("fphone").value;
+     var img=document.getElementById("img").value;
+     localStorage.setItem("name",fname);
+     localStorage.setItem("phone",fphone);
+     localStorage.setItem("image",img);
+     }
+     
+  window.onload=function(){
+        var myname=document.getElementById("myname");
+           var myphone=document.getElementById("myphone");
+             var myimage=document.getElementById("myimage");
+ myname.innerText=localStorage.getItem("name");
+ myphone.innerText=localStorage.getItem("phone");
+
+   }
+ </script>
+</body>
+</html>

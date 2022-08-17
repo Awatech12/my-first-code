@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='utf-8'?><widget id="com.ayobami.awatechcalxulator" xmlns="http://www.w3.org/ns/widgets" version="1.0.0">  <name>Aptitude Teat</name>  <description>Try and answer the questions</description>  <plugin name="cordova-plugin-whitelist" />  <access origin="*" /></widget>

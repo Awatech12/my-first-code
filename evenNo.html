@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <input type="text" id="num" size="5"><input type="button" value="check" onclick="check()">
+ <div id="result"></div> 
+ 
+ <script>
+     function check(){
+  var num=document.getElementById("num").value;
+  var result=document.getElementById("result");
+  if(isNaN(num)){
+      result.innerText="Please enter any Number not Alphabet or Symbols";
+  }
+  else if(num==""){
+      result.innerText="Please enter any Number";
+  }
+  else if(num%2=="0")
+  {
+      result.innerText=num+" is an even Number";
+  }
+  else
+{
+    result.innerText=num+" is not an even Number"
+}
+     }
+ </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic equation Solver</title>
+</head>
+<body>
+    <style>
+        .text{
+            box-shadow:0px 0px 2px 0px black;
+        }
+    </style>
+    <i><div class="text">Please enter Coefficients <b>a,b and c</b>  of a quadratic equation of the form <b>ax<sup>2</sup>bx+c=0;</b>For Example if a quadratic equation is given as follow:<b>2x<sup>2</sup>+5x+6=0</b></div></i><br>
+ <form name="quad">
+ a:<input type="text" size="5" name="a">
+ b:<input type="text" size="5" name="b">
+ c:<input type="text" size="5" name="c">
+ <input type="button" value="calculate" onclick="cal()">
+      
+ </form> 
+    
+ <br> <div class="text" id="result"></div>
+ <script>
+ function cal(){
+ var output;
+ var a=document.forms["quad"]["a"].value;
+ var b=document.forms["quad"]["b"].value;
+ var c=document.forms["quad"]["c"].value;
+ var result=document.getElementById("result");
+ if(a=="0")
+ {
+     output="<em>Value of a can not be zero</em>"
+ }
+ else if(isNaN(a)){
+ output="<em>Value of a can not be Alphabet</em>"
+ }
+ else if(isNaN(b)){
+ output="<em>Value of b can not be Alphabet</em>"
+ }
+ else if(isNaN(c)){
+ output="<em>Value of c can not be Alphabet</em>"
+ }
+ else{
+   var x1=(-b + Math.sqrt(Math.pow(b,2) - 4*a*c))/(2*a);
+   var x2=(-b - Math.sqrt(Math.pow(b,2) - 4*a*c))/(2*a);
+   
+   output=" The value of X is "+x1+" Or" +x2;
+ }
+ result.innerHTML=output;
+ }
+ </script>
+</body>
+</html>
